@@ -1,7 +1,5 @@
 import "./CategoryBodyParts.css";
-import RightArrow from "../../assets/rightArrow.png";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -33,19 +31,6 @@ const CategoryBodyParts = () => {
         <span>Execises</span>
         <span className="stroke-text">to shape you</span>
       </div>
-      {/* <div className="program-categories">
-        {programsData.map((program) => (
-          <div className="category">
-            {program.image}
-            <span>{program.heading}</span>
-            <span>{program.details}</span>
-            <div className="join-now">
-              <span>Join Now</span>
-              <img src={RightArrow} alt="" />
-            </div>
-          </div>
-        ))}
-      </div> */}
       <Swiper
         slidesPerView={5}
         spaceBetween={30}
@@ -58,8 +43,11 @@ const CategoryBodyParts = () => {
           <SwiperSlide>
             <div className="program-categories">
               <div className="category">
-                <img src={require(`../../assets/icons/${bodyPart}.svg`)} />
-                <span>{bodyPart}</span>
+                <img
+                  src={require(`../../assets/icons/${bodyPart}.svg`)}
+                  key={index}
+                />
+                <span key={index}>{bodyPart}</span>
               </div>
             </div>
           </SwiperSlide>

@@ -1,0 +1,40 @@
+.exercise-card {
+  display: flex;
+  min-height: 445px;
+  width: 20rem;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-top: 8px solid var(--orange);
+
+  background-color: gray;
+  padding-bottom: 0.75rem;
+}
+
+.tag {
+  margin-left: 21px;
+  color: white;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid white;
+  font-size: 14px;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+.text-bodyPart {
+  margin-left: 21px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.tag-container {
+  display: flex;
+  flex-direction: row;
+}
