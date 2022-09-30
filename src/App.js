@@ -1,29 +1,22 @@
-import { useState } from "react";
-import "./App.css";
-import CategoryBodyParts from "./components/CategoryBodyParts/CategoryBodyParts";
-import Exercises from "./components/Exercises/Exercises";
-import Footer from "./components/Footer/Footer";
-import Hero from "./components/Hero/Hero";
-import Join from "./components/Join/Join";
-import Reasons from "./components/Reasons/Reasons";
-function App() {
-  const [bodyPart, setBodyPart] = useState("all");
-  const [exercises, setExercises] = useState([]);
+import { Route, Routes } from "react-router-dom";
 
+import Home from "./pages/Home";
+import Header from "./components/Header/Header";
+import ExerciseDetail from "./pages/ExerciseDetail";
+import Footer from "./components/Footer/Footer";
+
+import "./App.css";
+
+const App = () => {
   return (
     <div className="App">
-      <Hero />
-      <CategoryBodyParts />
-      <Reasons />
-      <Exercises
-        exercises={exercises}
-        setExercises={setExercises}
-        bodyPart={bodyPart}
-      />
-      <Join />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/exercise/:id" element={<ExerciseDetail />} />
+      </Routes>
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

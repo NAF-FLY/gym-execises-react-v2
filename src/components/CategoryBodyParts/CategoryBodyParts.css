@@ -103,3 +103,43 @@
 .swiper-pagination-bulle {
   margin-top: 50px;
 }
+
+.form {
+  margin: 0 auto 2rem;
+  width: 70%;
+}
+
+.search-form {
+  display: flex;
+}
+
+.input-search {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 3rem;
+  border-radius: 10px 0 0 10px;
+  border: 3px solid var(--orange);
+  outline: none;
+  padding: 0 1rem;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.711);
+}
+
+.search-btn {
+  font-size: 1.4rem;
+  width: 12%;
+  border-radius: 0 10px 10px 0;
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
+  border: 3px solid var(--orange);
+  border-left: none;
+}
+
+.input-search::placeholder {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4c4e53;
+  opacity: 0.5;
+}

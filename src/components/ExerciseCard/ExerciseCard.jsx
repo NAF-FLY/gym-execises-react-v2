@@ -1,7 +1,6 @@
 import "./ExerciseCard.css";
 
 const ExerciseCard = ({ exercise }) => {
-  console.log(exercise);
   return (
     <div className="exercise-card">
       <img src={exercise.gifUrl} alt="ep[roqjwe" loading="lazy" />

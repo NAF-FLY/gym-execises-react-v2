@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../Header/Header";
 import "./Hero.css";
 import hero_image from "../../assets/hero_image.png";
 import hero_image_back from "../../assets/hero_image_back.png";
@@ -7,6 +6,7 @@ import Heart from "../../assets/heart.png";
 import Calories from "../../assets/calories.png";
 import { motion } from "framer-motion";
 import NumberCounter from "number-counter";
+import Header from "../Header/Header";
 const Hero = () => {
   const transition = { type: "spring", duration: 3 };
   const mobile = window.innerWidth <= 768 ? true : false;
@@ -15,7 +15,6 @@ const Hero = () => {
       <div className="blur blur-h"></div>
       <div className="left-h">
         <Header />
-
         <div className="ad">
           <motion.div
             initial={{ left: mobile ? "160px" : "215px" }}
@@ -95,7 +94,7 @@ const Hero = () => {
         >
           <img src={Calories} alt="" />
           <div>
-            <span>Calories burnt</span>
+            <span>Calories burned</span>
             <span>220kcal</span>
           </div>
         </motion.div>

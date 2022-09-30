@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import Pagination from "@mui/material/Pagination";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ExerciseCard from "../ExerciseCard/ExerciseCard";
-import useExerciseDBService, {
-  exerciseOptions,
-} from "../../services/ExerciseDBService";
-
+import useExerciseDBService from "../../services/ExerciseDBService";
+import { exerciseOptions } from "../../data/options";
 import "../ExerciseCard/ExerciseCard.css";
 import "./Exercises.css";
 import { Box, Stack } from "@mui/material";
@@ -26,7 +24,7 @@ const Exercises = ({ exercises, bodyPart, setExercises }) => {
   const paginate = (e, value) => {
     setCurrentPage(value);
 
-    window.scrollTo({ top: 1650, behavior: "smooth" });
+    window.scrollTo({ top: 1800, behavior: "smooth" });
   };
 
   const theme = createTheme({
