@@ -8,6 +8,9 @@ import useExerciseDBService from "../../services/ExerciseDBService";
 import { useEffect, useState } from "react";
 import { exerciseOptions } from "../../data/options";
 
+import LeftArrow from "../../assets/icons/arrow-left.svg";
+import RightArrow from "../../assets/icons/arrow-right.svg";
+
 const CategoryBodyParts = ({ setExercises, bodyPart, setBodyPart }) => {
   const [search, setSearch] = useState("");
   const [bodyParts, setBodyParts] = useState([]);
@@ -94,6 +97,10 @@ const CategoryBodyParts = ({ setExercises, bodyPart, setBodyPart }) => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className="arrows">
+        <img src={LeftArrow} alt="left-arrow" className="arrow" />
+        <img src={RightArrow} alt="right-arrow" className="arrow" />
+      </div>
     </div>
   );
 };
