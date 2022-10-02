@@ -1,0 +1,12 @@
+.similar-header {
+  display: flex;
+  gap: 5rem;
+  font-weight: bold;
+  font-size: 3rem;
+  justify-content: center;
+  color: white;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}

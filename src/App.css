@@ -51,3 +51,11 @@
   filter: blur(150px);
   z-index: -9;
 }
+
+.exercise-detail-container {
+  margin-top: 2rem;
+}
+
+.exerciseDetail {
+  padding: 2rem;
+}

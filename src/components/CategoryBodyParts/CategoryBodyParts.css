@@ -54,7 +54,7 @@
   height: 100%;
 }
 
-.swiper-slide {
+.swiper-category {
   text-align: center;
   font-size: 18px;
   background-color: gray;
@@ -74,12 +74,12 @@
   align-items: center;
 }
 
-.swiper-slide:hover {
+.swiper-category:hover {
   background: var(--planCard);
   cursor: pointer;
 }
 
-.swiper-slide img {
+.swiper-category img {
   display: block;
   width: 100%;
   height: 100%;

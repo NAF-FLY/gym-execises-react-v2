@@ -15,7 +15,12 @@
   color: white;
 }
 
-.header-menu > li:hover {
+.link-header {
+  text-decoration: none;
+  color: white;
+}
+
+.link-header:hover {
   cursor: pointer;
   color: var(--orange);
 }

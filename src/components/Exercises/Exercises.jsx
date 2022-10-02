@@ -58,21 +58,6 @@ const Exercises = ({ exercises, bodyPart, setExercises }) => {
     setExercises(newExercises);
   };
 
-  const currentExercisesTest = [
-    { name: "asdfsadf" },
-    { name: "asdfsadf" },
-    { name: "asdfsadf" },
-    { name: "asdfsadf" },
-    { name: "asdfsadf" },
-    { name: "asdfsadf" },
-    { name: "asdfsadf" },
-    { name: "asdfsadf" },
-    { name: "asdfsadf" },
-    { name: "asdfsadf" },
-    { name: "asdfsadf" },
-    { name: "asdfsadf" },
-  ];
-
   return (
     <Box>
       <div className="plans-container" id="pl">

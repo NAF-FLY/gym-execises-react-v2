@@ -1,0 +1,62 @@
+.detail-container {
+  display: flex;
+  gap: 4rem;
+  flex-direction: row;
+  padding: 5;
+  align-items: center;
+  justify-content: center;
+}
+
+.gif {
+  width: 70%;
+  border-radius: 1rem;
+}
+
+.detail-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  color: white;
+}
+
+.detail-name {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.detail-text {
+  margin-top: -2rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.extra-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.extra {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  background: rgb(210, 210, 210);
+}
+
+.paragraph-name {
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.span-name {
+  text-transform: capitalize;
+  font-weight: bold;
+}

@@ -43,7 +43,12 @@ const Join = () => {
             name="user_email"
             placeholder="Enter your email"
           />
-          <button className="btn btn-join">Join Now</button>
+          <button
+            className="btn btn-join"
+            style={{ background: "#f48915", padding: "0.5rem" }}
+          >
+            Join Now
+          </button>
         </form>
       </div>
     </div>

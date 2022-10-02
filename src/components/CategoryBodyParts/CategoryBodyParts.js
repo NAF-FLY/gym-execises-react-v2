@@ -83,6 +83,7 @@ const CategoryBodyParts = ({ setExercises, bodyPart, setBodyPart }) => {
       >
         {bodyParts.map((bodyPart, index) => (
           <SwiperSlide
+            className="swiper-category"
             onClick={() => {
               setBodyPart(bodyPart);
               window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
