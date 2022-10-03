@@ -14,7 +14,7 @@ import RightArrow from "../../assets/icons/arrow-right.svg";
 const CategoryBodyParts = ({ setExercises, bodyPart, setBodyPart }) => {
   const [search, setSearch] = useState("");
   const [bodyParts, setBodyParts] = useState([]);
-  const { loading, error, getBodyParts, getExercises } = useExerciseDBService();
+  const { getBodyParts, getExercises } = useExerciseDBService();
 
   useEffect(() => {
     const onRequest = () => {
@@ -38,7 +38,6 @@ const CategoryBodyParts = ({ setExercises, bodyPart, setBodyPart }) => {
   };
 
   const onSearchLoaded = (searchedExercises) => {
-    console.log(searchedExercises);
     if (search) {
       const searched = searchedExercises.filter(
         (item) =>
@@ -74,12 +73,11 @@ const CategoryBodyParts = ({ setExercises, bodyPart, setBodyPart }) => {
         </form>
       </div>
       <Swiper
-        slidesPerView={5}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
         className="mySwiper"
+        breakpoints={{
+          940: { slidesPerView: 5, spaceBetween: 20 },
+          400: { slidesPerView: 3, spaceBetween: 5 },
+        }}
       >
         {bodyParts.map((bodyPart, index) => (
           <SwiperSlide
@@ -91,8 +89,12 @@ const CategoryBodyParts = ({ setExercises, bodyPart, setBodyPart }) => {
           >
             <div className="program-categories" key={index}>
               <div className="category">
-                <img src={require(`../../assets/icons/${bodyPart}.svg`)} />
-                <span>{bodyPart}</span>
+                <img
+                  src={require(`../../assets/icons/${bodyPart}.svg`)}
+                  className="body-icons"
+                  alt={bodyPart}
+                />
+                <span className="span-body">{bodyPart}</span>
               </div>
             </div>
           </SwiperSlide>
@@ -107,3 +109,4 @@ const CategoryBodyParts = ({ setExercises, bodyPart, setBodyPart }) => {
 };
 
 export default CategoryBodyParts;
+// spaceBetween={20}

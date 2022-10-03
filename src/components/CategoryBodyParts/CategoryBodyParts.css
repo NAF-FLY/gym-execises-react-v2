@@ -58,7 +58,6 @@
   text-align: center;
   font-size: 18px;
   background-color: gray;
-
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -98,10 +97,6 @@
 .category > :nth-child(3) {
   font-size: 0.9rem;
   line-height: 25px;
-}
-
-.swiper-pagination-bulle {
-  margin-top: 50px;
 }
 
 .form {
@@ -164,4 +159,45 @@
 .arrow:hover {
   transition: 0.2s;
   transform: scale(1.25);
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    margin: 0;
+    width: 100%;
+  }
+
+  .search-form {
+    display: flex;
+    width: 100%;
+  }
+
+  .input-search {
+    width: 70%;
+  }
+  .search-btn {
+    font-size: 1.2rem;
+    width: 30%;
+  }
+
+  .swiper {
+    max-height: 140px;
+  }
+
+  .category {
+    padding: 1rem;
+    min-height: 110px;
+    justify-content: space-around;
+  }
+
+  .category > :nth-child(1) {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .category > :nth-child(2) {
+    font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
+  }
 }

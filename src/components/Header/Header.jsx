@@ -1,46 +1,79 @@
 import "./Header.css";
 
 import Logo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-scroll";
+import { Link as Navlink } from "react-router-dom";
+import Bars from "../../assets/icons/bars.png";
 
 const Header = () => {
+  const mobile = window.innerWidth <= 768 ? true : false;
+  const [menuOpened, setMenuOpened] = useState(false);
+
   return (
     <div className="header">
-      <Link to="/">
+      <Navlink to="/">
         <img src={Logo} alt="logo" className="logo" />
-      </Link>
-      <ul className="header-menu">
-        <Link to="/" className="link-header">
-          <li>Home</li>
-        </Link>
-        <Link
-          to="/"
-          className="link-header"
-          onClick={() => {
-            window.scrollTo({ top: 750, left: 100, behavior: "smooth" });
+      </Navlink>
+      {menuOpened === false && mobile === true ? (
+        <div
+          style={{
+            backgroundColor: "var(--appColor)",
+            padding: "0.5rem",
+            borderRadius: "5px",
           }}
         >
-          <li>Category</li>
-        </Link>
-        <Link
-          to="/"
-          className="link-header"
-          onClick={() => {
-            window.scrollTo({ top: 1300, left: 100, behavior: "smooth" });
-          }}
-        >
-          <li>Why us</li>
-        </Link>
-        <Link
-          to="/"
-          className="link-header"
-          onClick={() => {
-            window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
-          }}
-        >
-          <li>Exercises</li>
-        </Link>
-      </ul>
+          <img
+            src={Bars}
+            alt=""
+            style={{
+              width: "1.5rem",
+              height: "1.5rem",
+            }}
+            onClick={() => setMenuOpened(true)}
+          />
+        </div>
+      ) : (
+        <ul className="header-menu">
+          <Navlink
+            to="/"
+            className="link-header"
+            onClick={() => setMenuOpened(false)}
+          >
+            <li>Home</li>
+          </Navlink>
+          <Link
+            to="programs"
+            className="link-header"
+            smooth={true}
+            onClick={() => {
+              setMenuOpened(false);
+            }}
+          >
+            <li>Category</li>
+          </Link>
+          <Link
+            to="reasons"
+            className="link-header"
+            smooth={true}
+            onClick={() => {
+              setMenuOpened(false);
+            }}
+          >
+            <li>Why us</li>
+          </Link>
+          <Link
+            to="pl"
+            className="link-header"
+            smooth={true}
+            onClick={() => {
+              setMenuOpened(false);
+            }}
+          >
+            <li>Exercises</li>
+          </Link>
+        </ul>
+      )}
     </div>
   );
 };

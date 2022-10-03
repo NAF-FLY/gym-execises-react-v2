@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import Detail from "../components/Detail/Detail";
 import ExerciseVideos from "../components/ExerciseVideos/ExerciseVideos";
 import Header from "../components/Header/Header";
-import Loader from "../components/Loader/Loader";
 import SimilarExercises from "../components/SimilarExercises/SimilarExercises";
 
 import { exerciseOptions } from "../data/options";
@@ -18,12 +17,8 @@ const ExerciseDetail = () => {
   const [equipmentExercises, setEquipmentExercises] = useState([]);
   const { id } = useParams();
 
-  const {
-    getExerciseDetail,
-    getExerciseTarget,
-    getExerciseEquipment,
-    loading,
-  } = useExerciseDBService();
+  const { getExerciseDetail, getExerciseTarget, getExerciseEquipment } =
+    useExerciseDBService();
   const { getExerciseVideos } = useYoutubeDBService();
 
   useEffect(() => {

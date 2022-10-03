@@ -43,3 +43,36 @@
   display: flex;
   flex-direction: row;
 }
+
+@media screen and (max-width: 600px) {
+  .exercise-card {
+    width: 11rem;
+    min-height: 260px;
+    justify-content: space-between;
+  }
+
+  .text-bodyPart {
+    margin-left: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-transform: capitalize;
+  }
+
+  .tag {
+    margin-left: 5px;
+    padding: 0.25rem 0.5rem;
+    font-size: 14px;
+  }
+
+  .tag-container {
+    justify-content: start;
+  }
+
+  .exercise-card:hover {
+    transform: scale(1);
+  }
+}

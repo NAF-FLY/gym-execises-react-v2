@@ -9,8 +9,7 @@ import "./Exercises.css";
 import { Box, Stack } from "@mui/material";
 
 const Exercises = ({ exercises, bodyPart, setExercises }) => {
-  const { loading, error, getExercises, getSelectedExercises } =
-    useExerciseDBService();
+  const { getExercises, getSelectedExercises } = useExerciseDBService();
   const [currentPage, setCurrentPage] = useState(1);
   const exercisesPerPage = 12;
 
@@ -85,7 +84,7 @@ const Exercises = ({ exercises, bodyPart, setExercises }) => {
               color="text"
               shape="rounded"
               sx={{
-                button: { color: "#ffffff" },
+                button: { color: "#ffffff", minWidth: 0 },
                 div: { color: "#ffffff" },
               }}
               defaultPage={1}

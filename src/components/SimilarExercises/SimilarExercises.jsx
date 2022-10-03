@@ -10,9 +10,9 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
   return (
     <div className="similar-exercise">
       <div className="target-container">
-        <div className="similar-header" style={{ gap: "2rem" }}>
+        <div className="similar-header">
           <span className="stroke-text">Similar</span>
-          <span className="text">Target Muscle</span>
+          <span className="text-target">Target Muscle</span>
           <span className="stroke-text">Exercises</span>
         </div>
         <div className="flex flex-row p-1 relative">
@@ -20,10 +20,11 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
             <Swiper
               slidesPerView={4}
               spaceBetween={30}
-              pagination={{
-                clickable: true,
-              }}
               className="mySwiper"
+              breakpoints={{
+                940: { slidesPerView: 4, spaceBetween: 20 },
+                400: { slidesPerView: 2, spaceBetween: 20 },
+              }}
             >
               {targetMuscleExercises.map((target, index) => (
                 <SwiperSlide
@@ -45,7 +46,7 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
         </div>
       </div>
       <div className="target-container">
-        <div className="similar-header" style={{ gap: "2rem" }}>
+        <div className="similar-header">
           <span className="stroke-text">Similar</span>
           <span className="text">Equipment</span>
           <span className="stroke-text">Exercises</span>
@@ -55,10 +56,11 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
             <Swiper
               slidesPerView={4}
               spaceBetween={30}
-              pagination={{
-                clickable: true,
-              }}
               className="mySwiper"
+              breakpoints={{
+                940: { slidesPerView: 4, spaceBetween: 20 },
+                400: { slidesPerView: 2, spaceBetween: 20 },
+              }}
             >
               {equipmentExercises.map((equipment, index) => (
                 <SwiperSlide

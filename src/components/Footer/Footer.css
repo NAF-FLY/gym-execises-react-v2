@@ -17,11 +17,13 @@
   display: flex;
   gap: 4rem;
 }
-.social-links > img {
+
+.social {
   width: 2rem;
   height: 2rem;
   cursor: pointer;
 }
+
 .logo-f > img {
   width: 10rem;
 }
