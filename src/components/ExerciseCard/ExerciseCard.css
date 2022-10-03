@@ -46,7 +46,7 @@
 
 @media screen and (max-width: 600px) {
   .exercise-card {
-    width: 11rem;
+    width: 10.5rem;
     min-height: 260px;
     justify-content: space-between;
   }

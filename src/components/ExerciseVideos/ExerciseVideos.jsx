@@ -12,33 +12,29 @@ const ExerciseVideos = ({ exerciseVideos }) => {
       </div>
 
       <div className="video-container">
-        {exerciseVideos.length ? (
-          exerciseVideos.slice(0, 12).map(({ video }, index) => (
-            <a
-              key={index}
-              href={`https://www.youtube.com/watch?v=${video.videoId}`}
-              className="video-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src={video.thumbnails[0].url}
-                alt={video.title}
-                className="video-cover"
-              />
-              <div>
-                <h5 className="video-title">
-                  {video.title.length > 30
-                    ? `${video.title.substr(0, 30)}...`
-                    : video.title}
-                </h5>
-                <h5 className="video-channel">{video.channelName}</h5>
-              </div>
-            </a>
-          ))
-        ) : (
-          <Loader />
-        )}
+        {exerciseVideos.slice(0, 12).map(({ video }, index) => (
+          <a
+            key={index}
+            href={`https://www.youtube.com/watch?v=${video.videoId}`}
+            className="video-link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={video.thumbnails[0].url}
+              alt={video.title}
+              className="video-cover"
+            />
+            <div>
+              <h5 className="video-title">
+                {video.title.length > 30
+                  ? `${video.title.substr(0, 30)}...`
+                  : video.title}
+              </h5>
+              <h5 className="video-channel">{video.channelName}</h5>
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   );

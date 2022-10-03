@@ -76,7 +76,7 @@ const CategoryBodyParts = ({ setExercises, bodyPart, setBodyPart }) => {
         className="mySwiper"
         breakpoints={{
           940: { slidesPerView: 5, spaceBetween: 20 },
-          400: { slidesPerView: 3, spaceBetween: 5 },
+          380: { slidesPerView: 3, spaceBetween: 5 },
         }}
       >
         {bodyParts.map((bodyPart, index) => (
