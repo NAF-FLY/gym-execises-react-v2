@@ -4,7 +4,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import ExerciseCard from "../ExerciseCard/ExerciseCard";
 import "./SimilarExercises.css";
-import Loader from "../Loader/Loader";
 
 const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
   return (

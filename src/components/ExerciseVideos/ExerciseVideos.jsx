@@ -1,5 +1,4 @@
 import React from "react";
-import Loader from "../Loader/Loader";
 import "./ExerciseVideos.css";
 
 const ExerciseVideos = ({ exerciseVideos }) => {
