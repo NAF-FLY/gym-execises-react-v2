@@ -8,4 +8,4 @@
 - Библиотеки: Material UI, React Router v6, Framer Motion, Number Counter, Swiper JS,
 - CSS медиа-запросы (media queries)
 - Возможно что-то еще...
-# Live Demo - https://gym-exercise-fitclub.netlify.app/
+# Демо - https://gym-exercise-fitclub.netlify.app/
